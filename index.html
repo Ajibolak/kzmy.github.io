@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <form class="userdetails" method="POST" onsubmit="appendRow(event)">
+        <div class="formGroup">
+            <label for="fname">First Name:</label>
+            <input id="fname" type="text" name="fname" required>
+        </div>
+        <div class="formGroup">
+            <label for="lname">Last Name:</label>
+            <input id="lname" type="text" name="lname" required>
+        </div>
+        <div class="formGroup">
+            <label for="email">Email Address:</label>
+            <input id="email" type="email" name="email" required>
+        </div>
+        <div class="formGroup">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div class="checkBoxCont">
+            <input type="checkbox" name="recent" id="recent" value="Yes">
+            <label for="recent">Recently came in to Nigeria within the last 14 days?</label>
+        </div>
+        <div class="centerText">
+            <button type="submit">Submit</button>
+        </div>
+
+    </form>
+    <div class="tableCont">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Gender</th>
+                <th>Came to Nigeria within the last 14 days?</th>
+                <th></th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ada Lovelace</td>
+                    <td>a@b.com</td>
+                    <td>Male</td>
+                    <td>No</td>
+                    <td><button onclick="editForm(event)">Edit</button></td>
+                    <td><button onclick="deleteInfo(event)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  <script src="scritps.js" charset="utf-8"></script>  
+</body>
+
+</html>
